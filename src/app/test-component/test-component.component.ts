@@ -15,7 +15,40 @@ export class TestComponentComponent implements OnInit {
   id: string;
   apiurl = 'http://localhost:8080/custom-ranking/getalltestcandidate?test_id=';
   data: any = {};
-
+  settings = {
+    actions: false,
+    columns: {
+      idx: {
+        title: 'Rank',
+        valuePrepareFunction: (value, row, cell) => {
+          return cell.row.index + 1;
+        }
+      },
+      id: {
+        title: 'ID'
+      },
+      fullName: {
+        title: 'Full Name'
+      },
+      attemptStarttime: {
+        title: 'Start Time',
+        valuePrepareFunction: (attemptStarttime) => {
+          const event = new Date(attemptStarttime);
+          return `${event.toLocaleTimeString()}`;
+        }
+      },
+      attemptEndtime: {
+        title: 'End Time',
+        valuePrepareFunction: (attemptEndtime) => {
+          const event = new Date(attemptEndtime);
+          return `${event.toLocaleTimeString()}`;
+        }
+      },
+      score: {
+        title: 'Score'
+      },
+    }
+  };
   ngOnInit(): void {
     this.id  = this.route.snapshot.paramMap.get('id');
     console.log('in custructor ' + this.id);
@@ -30,7 +63,7 @@ export class TestComponentComponent implements OnInit {
   getData() {
     this.getResponse().subscribe(data => {
       console.log(data);
-      this.data = data;
+      this.data = data.message;
   });
   }
 
