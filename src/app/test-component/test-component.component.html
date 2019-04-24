@@ -1,0 +1,22 @@
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Email</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Score</th>
+      <th scope="col">Start Time</th>
+      <th scope="col">End Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr scope="row"  *ngFor="let element of data.message">
+      <td scope="row">{{element.id}}</td>
+      <td scope="col">{{element.email}}</td>
+      <td scope="col">{{element.fullName}}</td>
+      <td scope="col">{{element.score}}</td>
+      <td scope="col">{{element.attemptStarttime}}</td>
+      <td scope="col">{{element.attemptEndtime}}</td>
+    </tr>
+  </tbody>
+</table>
