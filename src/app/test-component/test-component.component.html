@@ -1,7 +1,7 @@
 <table class="table" >
   <thead>
     <tr>
-      <th scope="col">ID</th>
+      <th scope="col">Rank</th>
       <th scope="col">Email</th>
       <th scope="col">Full Name</th>
       <th scope="col">Score</th>
@@ -10,8 +10,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr scope="row"  *ngFor="let element of data.message">
-      <td scope="row">{{element.id}}</td>
+    <tr scope="row"  *ngFor="let element of data.message ; let i = index">
+      <td scope="row">{{i+1}}</td>
       <td scope="col">{{element.email}}</td>
       <td scope="col">{{element.fullName}}</td>
       <td scope="col">{{element.score}}</td>
