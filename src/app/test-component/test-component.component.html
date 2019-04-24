@@ -15,8 +15,8 @@
       <td scope="col">{{element.email}}</td>
       <td scope="col">{{element.fullName}}</td>
       <td scope="col">{{element.score}}</td>
-      <td scope="col">{{element.attemptStarttime}}</td>
-      <td scope="col">{{element.attemptEndtime}}</td>
+      <td scope="col">{{element.attemptStarttime | date:'shortTime'}}</td>
+      <td scope="col">{{element.attemptEndtime | date:'shortTime'}}</td>
     </tr>
   </tbody>
 </table>
