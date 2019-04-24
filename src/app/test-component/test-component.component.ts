@@ -18,14 +18,8 @@ export class TestComponentComponent implements OnInit {
   settings = {
     actions: false,
     columns: {
-      idx: {
+      rank: {
         title: 'Rank',
-        valuePrepareFunction: (value, row, cell) => {
-          return cell.row.index + 1;
-        }
-      },
-      id: {
-        title: 'ID'
       },
       fullName: {
         title: 'Full Name'
@@ -44,7 +38,7 @@ export class TestComponentComponent implements OnInit {
           return `${event.toLocaleTimeString()}`;
         }
       },
-      score: {
+      finalScore: {
         title: 'Score'
       },
     }
