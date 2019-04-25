@@ -20,26 +20,30 @@ export class TestComponentComponent implements OnInit {
     columns: {
       rank: {
         title: 'Rank',
+        width: '10%',
       },
       fullName: {
-        title: 'Full Name'
+        title: 'Full Name',
       },
       attemptStarttime: {
         title: 'Start Time',
         valuePrepareFunction: (attemptStarttime) => {
           const event = new Date(attemptStarttime);
-          return `${event.toLocaleTimeString()}`;
-        }
+          return `${event.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+        },
+        filter: false,
       },
       attemptEndtime: {
         title: 'End Time',
         valuePrepareFunction: (attemptEndtime) => {
           const event = new Date(attemptEndtime);
-          return `${event.toLocaleTimeString()}`;
-        }
+          return `${event.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+        },
+        filter: false,
       },
       finalScore: {
-        title: 'Score'
+        title: 'Score',
+        width: '10%',
       },
     }
   };

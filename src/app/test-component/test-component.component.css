@@ -18,3 +18,28 @@
   margin-left:auto;
   padding: 0;
 }
+:host /deep/ ng2-smart-table tbody tr:nth-child(even){
+   background-color:thistle;
+}
+:host /deep/ ng2-smart-table tbody tr:nth-child(odd){
+  background-color:tan;
+}
+:host /deep/ ng2-smart-table table{
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  border-width: 2px;
+
+  display: table;
+  border-spacing: 2px;
+  /* width: 60%; */
+}
+ /* grid lines */
+:host /deep/ ng2-smart-table table > tbody > tr > td {
+  border: 1px solid grey;
+}
+
+/* headers grid color*/
+:host /deep/ ng2-smart-table thead > tr > th  {
+  border: 1px solid grey;
+}
