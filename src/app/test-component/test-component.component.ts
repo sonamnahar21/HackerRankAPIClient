@@ -15,38 +15,42 @@ export class TestComponentComponent implements OnInit {
   id: string;
   apiurl = 'http://localhost:8080/custom-ranking/getalltestcandidate?test_id=';
   data: any = {};
-  settings = {
-    actions: false,
-    columns: {
-      rank: {
-        title: 'Rank',
-        width: '10%',
-      },
-      fullName: {
-        title: 'Full Name',
-      },
-      attemptStarttime: {
-        title: 'Start Time',
-        valuePrepareFunction: (attemptStarttime) => {
-          const event = new Date(attemptStarttime);
-          return `${event.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
-        },
-        filter: false,
-      },
-      attemptEndtime: {
-        title: 'End Time',
-        valuePrepareFunction: (attemptEndtime) => {
-          const event = new Date(attemptEndtime);
-          return `${event.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
-        },
-        filter: false,
-      },
-      finalScore: {
-        title: 'Score',
-        width: '10%',
-      },
-    }
-  };
+  // settings = {
+  //   actions: false,
+
+  //   columns: {
+  //     rank: {
+  //       title: 'Rank',
+  //       width: '10%',
+  //       // filter: false,
+  //     },
+  //     fullName: {
+  //       title: 'Full Name',
+  //       // filter: false,
+  //     },
+  //     // attemptStarttime: {
+  //     //   title: 'Start Time',
+  //     //   valuePrepareFunction: (attemptStarttime) => {
+  //     //     const event = new Date(attemptStarttime);
+  //     //     return `${event.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+  //     //   },
+  //     //   filter: false,
+  //     // },
+  //     // attemptEndtime: {
+  //     //   title: 'End Time',
+  //     //   valuePrepareFunction: (attemptEndtime) => {
+  //     //     const event = new Date(attemptEndtime);
+  //     //     return `${event.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+  //     //   },
+  //     //   filter: false,
+  //     // },
+  //     finalScore: {
+  //       title: 'Score',
+  //       width: '10%',
+  //       // filter: false,
+  //     },
+  //   }
+  // };
   ngOnInit(): void {
     this.id  = this.route.snapshot.paramMap.get('id');
     console.log('in custructor ' + this.id);
@@ -61,7 +65,7 @@ export class TestComponentComponent implements OnInit {
   getData() {
     this.getResponse().subscribe(data => {
       console.log(data);
-      this.data = data.message;
+      this.data = data;
   });
   }
 

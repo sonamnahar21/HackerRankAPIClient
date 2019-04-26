@@ -1,45 +1,37 @@
-#logo {
-	vertical-align:middle;
+table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.navbar-brand span {
-	font-size:2rem;
-	line-height:1.2;
-	font-weight: 200;
-	display:inline-block;
-  vertical-align:middle;
-	padding:0 0 0 15px;
-}
-.navbar-brand b {
-	display:block;
-	font-size:50%;
-	line-height:1;
-}
-.navbar-nav {
-  margin-left:auto;
-  padding: 0;
+
+
+/* .gray-l{background-color:#ececec} */
+/* .ng2-st-thead-filters-row{
+  visibility: hidden !important;
+  display: none !important;
 }
 :host /deep/ ng2-smart-table tbody tr:nth-child(even){
-   background-color:thistle;
-}
-:host /deep/ ng2-smart-table tbody tr:nth-child(odd){
+   background-color:#DCDCDC;
+} */
+/* :host /deep/ ng2-smart-table tbody tr:nth-child(odd){
   background-color:tan;
-}
-:host /deep/ ng2-smart-table table{
+} */
+/* :host /deep/ ng2-smart-table table{
   border-style: inset;
   border-color: initial;
   border-image: initial;
   border-width: 2px;
 
   display: table;
-  border-spacing: 2px;
+  border-spacing: 2px; */
   /* width: 60%; */
-}
+/* } */
  /* grid lines */
-:host /deep/ ng2-smart-table table > tbody > tr > td {
+/* :host /deep/ ng2-smart-table table > tbody > tr > td {
   border: 1px solid grey;
-}
+} */
 
 /* headers grid color*/
-:host /deep/ ng2-smart-table thead > tr > th  {
+/* :host /deep/ ng2-smart-table thead > tr > th  {
   border: 1px solid grey;
-}
+} */
