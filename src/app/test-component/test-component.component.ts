@@ -56,7 +56,10 @@ export class TestComponentComponent implements OnInit {
     this.apiurl = this.apiurl + this.id;
     alert('Api URL: ' +  this.apiurl);
     this.getData();
-    this.getResponse();
+    alert('after getData()');
+    // this.getResponse();
+    // alert('after getResponse()');
+
   }
   getResponse() {
    return this.http.get(this.apiurl).pipe(map(res => res.json()));
