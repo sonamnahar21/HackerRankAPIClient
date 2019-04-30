@@ -55,7 +55,11 @@ export class TestComponentComponent implements OnInit {
     this.id  = this.route.snapshot.paramMap.get('id');
     this.apiurl = this.apiurl + this.id;
     alert('Api URL: ' +  this.apiurl);
-    this.getData();
+    //this.getData();
+    this.getResponse().subscribe(data => {
+      this.data = data;
+      alert('in get data' + this.data.message);
+    });
     alert('after getData()');
     // this.getResponse();
     // alert('after getResponse()');
@@ -64,11 +68,12 @@ export class TestComponentComponent implements OnInit {
   getResponse() {
    return this.http.get(this.apiurl).pipe(map(res => res.json()));
   }
-  getData() {
-    this.getResponse().subscribe(data => {
-      this.data = data;
-      alert('in get data' + this.data.message);
-    });
-  }
+  // getData() {
+  //   alert('in getDATA()');
+  //   this.getResponse().subscribe(data => {
+  //     this.data = data;
+  //     alert('in get data' + this.data.message);
+  //   });
+  // }
 
 }
