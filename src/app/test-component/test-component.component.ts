@@ -13,7 +13,11 @@ export class TestComponentComponent implements OnInit {
   constructor ( private route: ActivatedRoute, private http: Http ) {}
   title = 'hackerrank';
   id: string;
-  apiurl = 'http://localhost:8080/custom-ranking/getalltestcandidate?test_id=';
+  // for local
+  //apiurl = 'http://localhost:8080/custom-ranking/getalltestcandidate?test_id=';
+  // for production
+  apiurl = 'http://13.57.32.246:8080/custom-ranking/getalltestcandidate?test_id=';
+
   data: any = {};
   // settings = {
   //   actions: false,
