@@ -68,7 +68,7 @@ export class TestComponentComponent implements OnInit {
     this.getResponse().subscribe(data => {
       this.data = data;
     });
-  alert('in get data' + this.data);
+  alert('in get data' + this.data.message[0]);
   }
 
 }
