@@ -54,6 +54,7 @@ export class TestComponentComponent implements OnInit {
   ngOnInit(): void {
     this.id  = this.route.snapshot.paramMap.get('id');
     this.apiurl = this.apiurl + this.id;
+    alert('Api URL: ' +  this.apiurl);
     this.getData();
     this.getResponse();
   }
@@ -63,6 +64,7 @@ export class TestComponentComponent implements OnInit {
   getData() {
     this.getResponse().subscribe(data => {
       this.data = data;
+      alert('in get data' + data);
   });
   }
 
