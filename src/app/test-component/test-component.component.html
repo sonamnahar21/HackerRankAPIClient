@@ -9,11 +9,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr scope="row"  *ngFor="let element of data.message">
-      <td scope="row" class="text-center">{{element.rank}}</td>
-      <td scope="col">{{element.fullName}}</td>
-      <td scope="col" class="text-center">{{element.questionSolved}}</td>
-      <td scope="col">{{element.finalScore}}</td>
+      <!-- *ngFor="let element of data.message" -->
+    <tr scope="row"  >
+      <td scope="row" class="text-center">{{data.message[0].rank}}</td>
+      <td scope="col">{{data.message[0].fullName}}</td>
+      <td scope="col" class="text-center">{{data.message[0].questionSolved}}</td>
+      <td scope="col">{{data.message[0].finalScore}}</td>
     </tr>
   </tbody>
 </table>
