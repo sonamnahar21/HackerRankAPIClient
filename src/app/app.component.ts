@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/Observable/interval';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +6,7 @@ import 'rxjs/add/Observable/interval';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  ngOnInit(){
+  ngOnInit() {
     // setTimeout(() => {
     //   console.log('refreshing');
     //   window.location.reload();
