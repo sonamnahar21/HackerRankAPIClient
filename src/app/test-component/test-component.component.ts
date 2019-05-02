@@ -16,7 +16,7 @@ export class TestComponentComponent implements OnInit {
   // for local
   //apiurl = 'http://localhost:8080/custom-ranking/getalltestcandidate?test_id=';
   // for production
-  apiurl = 'http://54.183.34.90:8080/custom-ranking/getalltestcandidate?test_id=';
+  apiurl = 'http://52.9.251.131:8080/custom-ranking/getalltestcandidate?test_id=';
 
   data: any = {};
   // settings = {
