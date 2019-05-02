@@ -2,18 +2,22 @@
 <table class="table table-striped" >
   <thead>
     <tr>
-      <th scope="col">Rank</th>
+      <th scope="col" class="text-center">Rank</th>
       <th scope="col">Full Name</th>
-      <th scope="col">Question Solved</th>
-      <th scope="col">Score</th>
+      <th scope="col" class="text-center">Question Solved</th>
+      <th scope="col" class="text-center">Full Score</th>
+      <th scope="col" class="text-center">Partial Score</th>
+      <th scope="col" class="text-center">Duration</th>
     </tr>
   </thead>
   <tbody>
     <tr scope="row"  *ngFor="let element of data.message">
-      <td scope="row" class="text-center">{{element.rank}}</td>
+      <td scope="col" class="text-center">{{element.rank}}</td>
       <td scope="col">{{element.fullName}}</td>
       <td scope="col" class="text-center">{{element.questionSolved}}</td>
-      <td scope="col">{{element.finalScore}}</td>
+      <td scope="col" class="text-center">{{element.finalScore}}</td>
+      <td scope="col" class="text-center">{{element.score}}</td>
+      <td scope="col" class="text-center">{{element.timeTakenString}} mins</td>
     </tr>
   </tbody>
 </table>
